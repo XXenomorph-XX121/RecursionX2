@@ -13,21 +13,21 @@ addToTwelve([1]); // false
 ***********************************************************************/
 
 
-function addToTwelve(arr, num = 0) {
-  // Your code here
-  if (arr.length < 2) return false
-  if (!arr.length) return
-  num = arr[0] + arr[1]
-  if (num === 12) return true
-  return addToTwelve(arr.slice(1), num)
+function addToTwelve(arr) {
+
+  if (arr.length < 2) return false;
+
+  if (arr[0] + arr[1] === 12) return true;
+
+  else {
+    arr.shift();
+
+    return addToTwelve(arr);
+  }
+
 }
 
-// function addToTwelve(arr) {
-//   if (arr.length < 2) return false;
-//   if (arr[0] + arr[1] === 12) return true;
 
-//   return addToTwelve(arr.slice(1));
-// }
 
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/

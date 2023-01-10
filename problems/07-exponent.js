@@ -21,14 +21,6 @@ exponent(5, 5); // 3125
 ***********************************************************************/
 
 function exponent(num, power) {
-    if(power === 1) return num;
-    if (power > 0) {
-
-        return num * exponent(num, power - 1)
-    }
-    if (power < 0) {
-        return (1/exponent(num, Math.abs(power)))
-    }
 
 }
 
